@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    color: #15396a;
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    width: 100%;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.title-h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 50px;
+    font-weight: bolder;
+    font-size: 60px;
+    color: #15396a;
+    top: 500px;
+}
+
+.container1 {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    width: 300px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form {
+    text-align: center;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 500px;
+    height: 56px;
+    padding: 15px;
+    border: 1px solid #15396a;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+label {
+    position: absolute;
+    left: 0;
+    margin-left: 12px;
+    top: 15px;
+    font-size: 16px;
+    color: #15396a;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+input:focus+label,
+input:valid+label {
+    top: 0;
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+    color: #183d72;
+}
+
+.forgot-password {
+    transform: translate(-180px, -10px);
+    display: block;
+}
+
+button {
+    background-color: #f4b26a;
+    color: #15396a;
+    padding: 10px 20px;
+    width: 138px;
+    height: 51px;
+    border: 1px solid #f4b26a;
+    border-radius: 18px !important;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+p {
+    margin-top: 10px;
+}
+
+.main h1 {
+    color: #15396a;
+    font-size: 3rem;
+}
+
+.accounts {
+    margin: 50px;
+}
+
+.accounts i,
+a {
+    margin: 5px;
+}
+
+.horizontal-panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.horizontal-panel p {
+    margin-top: 20px;
+    font-weight: 100;
+}
+
+.account-details p,
+.view-address a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: lighter;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+@media screen and (max-width:768px) {
+    input {
+        width: 300px;
+    }
+    .forgot-password {
+        transform: translate(0, 0);
+    }
+}
+
+
+/*Order history section*/
+
+.order-history-section {
+    height: 500px;
+    width: 800px;
+    overflow-y: scroll;
+    display: block;
+}
+
+.order-item {
+    height: 100px;
+    width: 90%;
+    margin: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    color: #15396a;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.image {
+    height: 100px;
+    width: 100px;
+    background-color: #130f0f;
+    object-fit: cover;
+}
+
+.title {
+    font-size: larger;
+    color: #15396a;
+    margin: 2px;
+}
+
+.price {
+    font-size: medium;
+    font-weight: lighter;
+    color: #15396a;
+    margin: 2px;
+}
+
+.date,
+.status {
+    font-size: medium;
+    color: #15396a;
+    margin: 2px;
+}
+
+
+/* Apply responsive styles for screens with a maximum width of 768px (typical mobile screen size) */
+
+@media screen and (max-width: 768px) {
+    .horizontal-panel {
+        flex-direction: column;
+        padding: 1px;
+        margin: 2px;
+    }
+    .order-history-section {
+        width: 100%;
+        /* Expand to full width on small screens */
+        max-height: none;
+        /* Remove the maximum height to allow content to flow naturally */
+    }
+    .order-item {
+        height: auto;
+        /* Allow the height to adjust based on content */
+        width: 100%;
+        /* Expand to full width on small screens */
+        margin: 10px 0;
+        /* Add margin to separate items vertically */
+        padding: 10px;
+        /* Add padding for better spacing */
+        display: block;
+        /* Display items as blocks for better stacking on small screens */
+    }
+    .image {
+        height: 200px;
+        /* Allow the height to adjust based on content */
+        width: 90%;
+        /* Fixed width for the image */
+        margin-right: 10px;
+        /* Add some spacing between the image and text */
+    }
+    .image img {
+        height: 100%;
+        /* Allow the height to adjust based on content */
+        width: 100%;
+        /* Fixed width for the image */
+        margin-right: 10px;
+        /* Add some spacing between the image and text */
+        object-fit: fill;
+    }
+    .title,
+    .price,
+    .date,
+    .status {
+        font-size: small;
+        margin-left: 10px;
+        /* Adjust font size for better mobile readability */
+    }
+    .info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
